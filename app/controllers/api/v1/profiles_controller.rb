@@ -13,8 +13,7 @@ class Api::V1::ProfilesController < ActionController::Base
   end
 
   def show
-    # render :text => "item #{params[:id]}"
-    respond_with User.find(2)
+    respond_with current_resource_owner
   end
 
   private
